@@ -1,0 +1,6 @@
+/codebase/globomart-retail-parent/globomart-config-server/target/
+/codebase/globomart-retail-parent/globomart-eureka-server/target/
+.mvn
+target
+
+
