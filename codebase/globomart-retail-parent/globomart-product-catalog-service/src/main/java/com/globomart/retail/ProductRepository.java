@@ -16,7 +16,7 @@ import org.springframework.data.rest.core.annotation.RestResource;
  * @author cyberaka
  */
 @RepositoryRestResource
-interface ProductRepository extends JpaRepository<Product, Long> {       
+public interface ProductRepository extends JpaRepository<Product, Long> {       
     
     @RestResource (path = "by-name")
     Collection<Product> findByProductName(@Param("pn") String pn);

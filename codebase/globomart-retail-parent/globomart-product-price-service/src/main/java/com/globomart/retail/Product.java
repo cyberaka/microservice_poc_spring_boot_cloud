@@ -5,30 +5,23 @@
  */
 package com.globomart.retail;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-
 /**
  *
  * @author cyberaka
  */
-@Entity
 public class Product {
 
-    @Id
-    @GeneratedValue
     private Long id;
 
     private String productName;
-    
+
     private String productDescription;
-    
+
     private String productType;
-    
+
     private int stockInHand;
-    
-    public Product(String productName, String productDescription, 
+
+    public Product(String productName, String productDescription,
             String productType, int stockInHand) {
         this.productName = productName;
         this.productDescription = productDescription;
@@ -85,4 +78,3 @@ public class Product {
     }
 
 }
-

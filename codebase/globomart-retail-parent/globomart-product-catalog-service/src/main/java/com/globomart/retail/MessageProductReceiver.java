@@ -15,7 +15,7 @@ import org.springframework.integration.annotation.ServiceActivator;
  * @author cyberaka
  */
 @MessageEndpoint
-class MessageProductReceiver {
+public class MessageProductReceiver {
     
     @ServiceActivator (inputChannel = Sink.INPUT)
     public void acceptProduct(String pn) {

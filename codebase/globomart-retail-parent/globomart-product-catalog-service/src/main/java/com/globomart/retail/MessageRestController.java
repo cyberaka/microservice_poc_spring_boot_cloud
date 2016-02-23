@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RefreshScope
 @RestController
-class MessageRestController {
+public class MessageRestController {
     
     @Value("${message}")
     private String message;
