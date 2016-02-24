@@ -131,9 +131,12 @@
 </node>
 <node CREATED="1456263608454" ID="ID_11425905" MODIFIED="1456263619853" TEXT="Ensure the service starts successfully">
 <node CREATED="1456263630500" ID="ID_1289584880" MODIFIED="1456264070987" TEXT="http://localhost:9004/products/names"/>
+<node CREATED="1456300256307" ID="ID_755847639" MODIFIED="1456300258032" TEXT="http://localhost:9004/products/find_price_by_product_id?productId=1"/>
+<node CREATED="1456300258692" ID="ID_86961995" MODIFIED="1456300260120" TEXT="http://localhost:9004/products/find_price_by_product_id?productId=2"/>
+<node CREATED="1456300248300" ID="ID_1260589931" MODIFIED="1456300250867" TEXT="http://localhost:9004/products/find_price_by_product_id?productId=3"/>
 </node>
 <node CREATED="1456264022588" ID="ID_57929581" MODIFIED="1456264024428" TEXT="Testing">
-<node CREATED="1456263994721" ID="ID_274443515" MODIFIED="1456264015649" TEXT="Use any REST client to do full CRUD operation"/>
+<node CREATED="1456263994721" ID="ID_274443515" MODIFIED="1456300292910" TEXT="Use any REST client to do query"/>
 </node>
 </node>
 </node>
