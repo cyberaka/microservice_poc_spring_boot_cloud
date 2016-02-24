@@ -69,6 +69,76 @@
 <node CREATED="1456252688222" ID="ID_855617108" MODIFIED="1456252710061" TEXT="We will use Spring Data, JPA (Hibernate) as our ORM for this assignment"/>
 </node>
 <node CREATED="1456252731997" ID="ID_1837200614" MODIFIED="1456252752046" TEXT="Zipkin log management tool will be deployed using Docker (If needed)"/>
+<node CREATED="1456263399158" ID="ID_681717221" MODIFIED="1456263419609" TEXT="Security aspect has not been looked into ">
+<node CREATED="1456263420238" ID="ID_1462781564" MODIFIED="1456263429736" TEXT="No attempt to integrate with spring security has been done"/>
+<node CREATED="1456263430005" ID="ID_697935719" MODIFIED="1456263439152" TEXT="No session management / secure token implementation has been done"/>
+</node>
+</node>
+<node CREATED="1456263447688" ID="ID_550777837" MODIFIED="1456263450234" POSITION="right" TEXT="Instructions">
+<node CREATED="1456263457765" ID="ID_1621603896" MODIFIED="1456263461118" TEXT="Pre-Requisites">
+<node CREATED="1456263461647" ID="ID_901642607" MODIFIED="1456263463670" TEXT="JDK 1.8"/>
+<node CREATED="1456263463902" ID="ID_1308480288" MODIFIED="1456263489616" TEXT="Maven 3.1.x"/>
+</node>
+<node CREATED="1456263501724" ID="ID_1220781" MODIFIED="1456264095690" TEXT="Step 1: Download the zip file"/>
+<node CREATED="1456263525913" ID="ID_223366345" MODIFIED="1456263535835" TEXT="Step 2: Unzip in a convenient location"/>
+<node CREATED="1456263536906" ID="ID_66745339" MODIFIED="1456263545636" TEXT="Step 3: Boot Config Server">
+<node CREATED="1456263546090" ID="ID_458541248" MODIFIED="1456263597405" TEXT="Switch to folder ./codebase/globomart-retail-parent/globomart-config-server"/>
+<node CREATED="1456263598086" ID="ID_1888976924" MODIFIED="1456263603053" TEXT="Execute: ">
+<node CREATED="1456263603365" ID="ID_98380418" MODIFIED="1456263606989" TEXT="mvn spring-boot:run"/>
+</node>
+<node CREATED="1456263608454" ID="ID_63489125" MODIFIED="1456263619853" TEXT="Ensure the service starts successfully">
+<node CREATED="1456263630500" ID="ID_1134566318" MODIFIED="1456263646484" TEXT="http://localhost:9000/application/master"/>
+<node CREATED="1456263715371" ID="ID_1925531747" MODIFIED="1456263716387" TEXT="http://localhost:9000/globomart-eureka-service/master"/>
+<node CREATED="1456263737505" ID="ID_67947700" MODIFIED="1456263738179" TEXT="http://localhost:9000/globomart-hystrix-dashboard/master"/>
+<node CREATED="1456263760497" ID="ID_954413969" MODIFIED="1456263761315" TEXT="http://localhost:9000/globomart-product-catalog-service/master"/>
+<node CREATED="1456263782250" ID="ID_296638627" MODIFIED="1456263791641" TEXT="http://localhost:9000/globomart-product-price-service/master"/>
+</node>
+</node>
+<node CREATED="1456263810602" ID="ID_824026941" MODIFIED="1456263817954" TEXT="Step 4: Boot Eureka Server">
+<node CREATED="1456263546090" ID="ID_268550025" MODIFIED="1456263846792" TEXT="Switch to folder ./codebase/globomart-retail-parent/globomart-eureka-server"/>
+<node CREATED="1456263598086" ID="ID_1027665902" MODIFIED="1456263603053" TEXT="Execute: ">
+<node CREATED="1456263603365" ID="ID_654883272" MODIFIED="1456263606989" TEXT="mvn spring-boot:run"/>
+</node>
+<node CREATED="1456263608454" ID="ID_104949338" MODIFIED="1456263619853" TEXT="Ensure the service starts successfully">
+<node CREATED="1456263630500" ID="ID_598425246" MODIFIED="1456263869920" TEXT="http://localhost:9001/"/>
+</node>
+</node>
+<node CREATED="1456263897873" ID="ID_637174228" MODIFIED="1456263904996" TEXT="Step 5: Boot Hystrix Dashboard">
+<node CREATED="1456263546090" ID="ID_365523042" MODIFIED="1456263920546" TEXT="Switch to folder ./codebase/globomart-retail-parent/globomart-hystrix-dashboard"/>
+<node CREATED="1456263598086" ID="ID_408914049" MODIFIED="1456263603053" TEXT="Execute: ">
+<node CREATED="1456263603365" ID="ID_1884754087" MODIFIED="1456263606989" TEXT="mvn spring-boot:run"/>
+</node>
+<node CREATED="1456263608454" ID="ID_1625179097" MODIFIED="1456263619853" TEXT="Ensure the service starts successfully">
+<node CREATED="1456263630500" ID="ID_1928445392" MODIFIED="1456263936452" TEXT="http://localhost:9002/hystrix.html"/>
+</node>
+</node>
+<node CREATED="1456263939192" ID="ID_95923539" MODIFIED="1456263949622" TEXT="Step 6: Boot Catalog Service">
+<node CREATED="1456263546090" ID="ID_733232954" MODIFIED="1456263976369" TEXT="Switch to folder ./codebase/globomart-retail-parent/globomart-product-catalog-service"/>
+<node CREATED="1456263598086" ID="ID_806013806" MODIFIED="1456263603053" TEXT="Execute: ">
+<node CREATED="1456263603365" ID="ID_1571072253" MODIFIED="1456263606989" TEXT="mvn spring-boot:run"/>
+</node>
+<node CREATED="1456263608454" ID="ID_964730205" MODIFIED="1456263619853" TEXT="Ensure the service starts successfully">
+<node CREATED="1456263630500" ID="ID_1621755084" MODIFIED="1456263991754" TEXT="http://localhost:9003/products"/>
+</node>
+<node CREATED="1456264022588" ID="ID_1173573738" MODIFIED="1456264024428" TEXT="Testing">
+<node CREATED="1456263994721" ID="ID_1233326979" MODIFIED="1456264015649" TEXT="Use any REST client to do full CRUD operation"/>
+</node>
+</node>
+<node CREATED="1456264028682" ID="ID_896803109" MODIFIED="1456264036212" TEXT="Step 7: Boot Price Service">
+<node CREATED="1456263546090" ID="ID_1528035997" MODIFIED="1456264058571" TEXT="Switch to folder ./codebase/globomart-retail-parent/globomart-product-price-service"/>
+<node CREATED="1456263598086" ID="ID_83880978" MODIFIED="1456263603053" TEXT="Execute: ">
+<node CREATED="1456263603365" ID="ID_982957060" MODIFIED="1456263606989" TEXT="mvn spring-boot:run"/>
+</node>
+<node CREATED="1456263608454" ID="ID_11425905" MODIFIED="1456263619853" TEXT="Ensure the service starts successfully">
+<node CREATED="1456263630500" ID="ID_1289584880" MODIFIED="1456264070987" TEXT="http://localhost:9004/products/names"/>
+</node>
+<node CREATED="1456264022588" ID="ID_57929581" MODIFIED="1456264024428" TEXT="Testing">
+<node CREATED="1456263994721" ID="ID_274443515" MODIFIED="1456264015649" TEXT="Use any REST client to do full CRUD operation"/>
+</node>
+</node>
+</node>
+<node CREATED="1456285784417" ID="ID_30085516" MODIFIED="1456285785777" POSITION="right" TEXT="Facts">
+<node CREATED="1456285786022" ID="ID_415045906" MODIFIED="1456285809454" TEXT="If you change eureka port number to something else then you need to specify the proper URL and port number in every service&apos;s property file."/>
 </node>
 </node>
 </map>

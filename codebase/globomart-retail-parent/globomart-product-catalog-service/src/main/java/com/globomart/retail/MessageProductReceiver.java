@@ -19,6 +19,7 @@ public class MessageProductReceiver {
     
     @ServiceActivator (inputChannel = Sink.INPUT)
     public void acceptProduct(String pn) {
+        System.out.println("======\n" + pn + "\n============");
         this.productRepository.save(new Product(pn, pn, pn, 1));
     }
     

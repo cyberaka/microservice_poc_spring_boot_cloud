@@ -9,7 +9,7 @@ package com.globomart.retail;
  *
  * @author cyberaka
  */
-public class Product {
+public class SimpleProduct {
 
     private Long id;
 
@@ -21,15 +21,16 @@ public class Product {
 
     private int stockInHand;
 
-    public Product(String productName, String productDescription,
+    public SimpleProduct(Long id, String productName, String productDescription,
             String productType, int stockInHand) {
+        this.id = id;
         this.productName = productName;
         this.productDescription = productDescription;
         this.productType = productType;
         this.stockInHand = stockInHand;
     }
 
-    public Product() {
+    public SimpleProduct() {
     }
 
     public Long getId() {
@@ -74,7 +75,7 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product{" + "id=" + id + ", productName=" + productName + ", productDescription=" + productDescription + ", productType=" + productType + ", stockInHand=" + stockInHand + '}';
+        return "SimpleProduct{" + "id=" + id + ", productName=" + productName + ", productDescription=" + productDescription + ", productType=" + productType + ", stockInHand=" + stockInHand + '}';
     }
 
 }
