@@ -44,7 +44,7 @@ mvn spring-boot:run
 
 Ensure the service starts successfully by checking the following URL:
 ```sh
-http://localhost:9001/
+http://localhost:8761/
 ```
 
 ### Step 5: Boot Hystrix Dashboard
