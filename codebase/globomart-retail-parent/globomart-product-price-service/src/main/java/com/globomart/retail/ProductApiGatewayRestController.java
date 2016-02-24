@@ -79,20 +79,18 @@ public class ProductApiGatewayRestController {
         if (productId == null) {
             return null;
         }
-        ParameterizedTypeReference<Resources<SimpleProduct>> ptr
-                = new ParameterizedTypeReference<Resources<SimpleProduct>>() {
+        ParameterizedTypeReference<SimpleProduct> ptr
+                = new ParameterizedTypeReference<SimpleProduct>() {
         };
-        ResponseEntity<Resources<SimpleProduct>> responseEntity
+        ResponseEntity<SimpleProduct> responseEntity
                 = this.restTemplate.exchange(
-                        "http://globomart-product-catalog-service/products", 
+                        "http://globomart-product-catalog-service/products/" + productId, 
                         HttpMethod.GET, 
-                        new HttpEntity<>(productId), 
+                        null, //new HttpEntity<>("pn=iPhone"), 
                         ptr);
 
-        Resources<SimpleProduct> resources = responseEntity.getBody();
-        Iterator<SimpleProduct> resourceItr = resources.iterator();
-        if (resourceItr.hasNext()) {
-            SimpleProduct product = resourceItr.next();
+        SimpleProduct product = responseEntity.getBody();
+        if (product != null) {
             Collection<Price> priceColl = priceRepository.findPriceByProductId(productId);
             ArrayList<SimplePrice> priceList = new ArrayList<>();
             Iterator<Price> priceItr = priceColl.iterator();
@@ -105,8 +103,5 @@ public class ProductApiGatewayRestController {
         } else {
             return null;
         }
-        
-//        Collection<SimpleProduct> productColl = resources.getContent();
-//        Stream<SimpleProduct> productStream = productColl.stream();
     }
 }

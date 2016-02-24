@@ -5,6 +5,8 @@
  */
 package com.globomart.retail;
 
+import java.sql.Date;
+import java.sql.Timestamp;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -23,10 +25,13 @@ public class Price {
     private Long productId;
     
     private Double price;
+    
+    private Date priceTimestamp;
 
-    public Price(Long productId, Double price) {
+    public Price(Long productId, Double price, Date priceTimestamp) {
         this.productId = productId;
         this.price = price;
+        this.priceTimestamp = priceTimestamp;
     }
 
     public Price() {
@@ -56,9 +61,17 @@ public class Price {
         this.price = price;
     }
 
+    public Date getPriceTimestamp() {
+        return priceTimestamp;
+    }
+
+    public void setPriceTimestamp(Date priceTimestamp) {
+        this.priceTimestamp = priceTimestamp;
+    }
+
     @Override
     public String toString() {
-        return "Price{" + "id=" + id + ", productId=" + productId + ", price=" + price + '}';
+        return "Price{" + "id=" + id + ", productId=" + productId + ", price=" + price + ", priceTimestamp=" + priceTimestamp + '}';
     }
 
 }
