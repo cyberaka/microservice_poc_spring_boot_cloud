@@ -4,14 +4,16 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.globomart.retail</groupId>
     <artifactId>globomart-retail-parent</artifactId>
-    <version>1.0.0.BUILD-SNAPSHOT</version>
+    <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
+    <name>Globomart Retail Parent</name>
+    <description>Globomart Retail Parent</description>
     <modules>
-        <module>globomart-config-service</module>
-        <module>globomart-eureka-service</module>
+        <module>globomart-api-commons</module>
+        <module>globomart-config-server</module>
+        <module>globomart-eureka-server</module>
         <module>globomart-hystrix-dashboard</module>
         <module>globomart-product-catalog-service</module>
-        <module>globomart-pricing-service</module>
-        <module>globomart-retail-client</module>
+        <module>globomart-product-price-service</module>
     </modules>
 </project>

@@ -67,7 +67,7 @@ public class ProductApiGatewayRestController {
      */
     @RequestMapping(method = RequestMethod.POST)
     public void write(@RequestBody SimpleProduct r) {
-        this.messageChannel.send(MessageBuilder.withPayload(r.getProductName()).build());
+        this.messageChannel.send(MessageBuilder.withPayload(r).build());
     }
 
     /**

@@ -30,8 +30,8 @@ import org.springframework.integration.annotation.ServiceActivator;
 public class MessageProductReceiver {
     
     @ServiceActivator (inputChannel = Sink.INPUT)
-    public void acceptProduct(String pn) {
-        this.productRepository.save(new Product(pn, pn, pn, 1));
+    public void acceptProduct(SimpleProduct sProduct) {
+        this.productRepository.save(new Product(sProduct.getProductName(), sProduct.getProductDescription(), sProduct.getProductType(), sProduct.getStockInHand()));
     }
     
     @Autowired
