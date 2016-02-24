@@ -85,7 +85,7 @@ public class ProductApiGatewayRestController {
      * 
      * @return 
      */
-    public List<SimplePrice> getPriceByProductIdFallback() {
+    public List<SimplePrice> getPriceByProductIdFallback(Long productId) {
         return Collections.emptyList();
     }
 

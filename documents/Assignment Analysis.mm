@@ -51,7 +51,7 @@
 <node CREATED="1456252437247" ID="ID_971224529" MODIFIED="1456252462602" TEXT="Distributed Version Control System like Git is acceptable and there is no need of subversion as of now."/>
 <node CREATED="1456252484794" ID="ID_1539274969" MODIFIED="1456252488770" TEXT="No UI is needed as of now">
 <node CREATED="1456252489792" ID="ID_146761325" MODIFIED="1456252503882" TEXT="Demonstration will be done using">
-<node CREATED="1456252504163" ID="ID_133509442" MODIFIED="1456252506163" TEXT="Test Cases"/>
+<node CREATED="1456252504163" ID="ID_133509442" MODIFIED="1456304282902" TEXT="Test Cases (Not sure if I will do it in this assignment)"/>
 <node CREATED="1456252506603" ID="ID_736332376" MODIFIED="1456252532722" TEXT="Chrome REST tools like POST MAN, Advance Rest Client"/>
 </node>
 </node>
@@ -73,6 +73,7 @@
 <node CREATED="1456263420238" ID="ID_1462781564" MODIFIED="1456263429736" TEXT="No attempt to integrate with spring security has been done"/>
 <node CREATED="1456263430005" ID="ID_697935719" MODIFIED="1456263439152" TEXT="No session management / secure token implementation has been done"/>
 </node>
+<node CREATED="1456304231166" ID="ID_1932220120" MODIFIED="1456304257206" TEXT="Redis server is expected to have no password settings. Authenticated redis servers need extra configuration in property files"/>
 </node>
 <node CREATED="1456263447688" ID="ID_550777837" MODIFIED="1456263450234" POSITION="right" TEXT="Instructions">
 <node CREATED="1456263457765" ID="ID_1621603896" MODIFIED="1456263461118" TEXT="Pre-Requisites">
@@ -122,6 +123,23 @@
 </node>
 <node CREATED="1456264022588" ID="ID_1173573738" MODIFIED="1456264024428" TEXT="Testing">
 <node CREATED="1456263994721" ID="ID_1233326979" MODIFIED="1456264015649" TEXT="Use any REST client to do full CRUD operation"/>
+<node CREATED="1456303817091" ID="ID_655074744" MODIFIED="1456303818394" TEXT="Example">
+<node CREATED="1456303818655" ID="ID_1384656183" MODIFIED="1456303826511" TEXT="http://localhost:9003/products">
+<node CREATED="1456303828951" ID="ID_180109797" MODIFIED="1456303830342" TEXT="POST"/>
+<node CREATED="1456303830630" ID="ID_1856337570" MODIFIED="1456303830630" TEXT=""/>
+</node>
+<node CREATED="1456304115830" ID="ID_1673896829" MODIFIED="1456304119452" TEXT="POST Request"/>
+<node CREATED="1456304119996" ID="ID_1009192335" MODIFIED="1456304120948" TEXT="URL">
+<node CREATED="1456304121833" ID="ID_1633297689" MODIFIED="1456304123140" TEXT="http://localhost:9003/products"/>
+</node>
+<node CREATED="1456304124297" ID="ID_787028682" MODIFIED="1456304126293" TEXT="Headers">
+<node CREATED="1456304139500" ID="ID_1384155926" MODIFIED="1456304148737" TEXT="Accept: application/json "/>
+<node CREATED="1456304149810" ID="ID_642908296" MODIFIED="1456304150577" TEXT="Content-Type: application/json "/>
+</node>
+<node CREATED="1456304156257" ID="ID_121000791" MODIFIED="1456304157752" TEXT="Payload">
+<node CREATED="1456304158041" ID="ID_1234866406" MODIFIED="1456304158872" TEXT="{       &quot;productName&quot; : &quot;iPhone Clone&quot;,       &quot;productDescription&quot; : &quot;iPhone Clone Description&quot;,       &quot;productType&quot; : &quot;iPhone Clone type&quot;,       &quot;stockInHand&quot; : &quot;10&quot; }"/>
+</node>
+</node>
 </node>
 </node>
 <node CREATED="1456264028682" ID="ID_896803109" MODIFIED="1456264036212" TEXT="Step 7: Boot Price Service">
@@ -142,6 +160,7 @@
 </node>
 <node CREATED="1456285784417" ID="ID_30085516" MODIFIED="1456285785777" POSITION="right" TEXT="Facts">
 <node CREATED="1456285786022" ID="ID_415045906" MODIFIED="1456285809454" TEXT="If you change eureka port number to something else then you need to specify the proper URL and port number in every service&apos;s property file."/>
+<node CREATED="1456304185608" ID="ID_1375085811" MODIFIED="1456304199201" TEXT="Zipkin and Turbine integration has been done but not yet tested. Will do it later on"/>
 </node>
 </node>
 </map>

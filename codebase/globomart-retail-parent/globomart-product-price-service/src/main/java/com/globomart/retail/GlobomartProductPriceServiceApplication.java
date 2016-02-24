@@ -48,7 +48,7 @@ public class GlobomartProductPriceServiceApplication {
     @Bean
     CommandLineRunner runner(PriceRepository rr) {
         return args -> {
-            Arrays.asList("1, 2, 3, 1, 2, 3, 1, 2, 3".split(","))
+            Arrays.asList("1, 2, 3".split(","))
                     .forEach(x -> rr.save(new Price(Long.parseLong(x.trim()),
                             Math.floor(Math.random() * 1000) / 100,
                             new Date(System.currentTimeMillis()))));
