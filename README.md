@@ -8,7 +8,7 @@ Micro Service POC Spring Boot cloud
     Maven 3.1.x
     Redis Server (No authentication)
 
-### Step 1: Download the zip file
+### Step 1: Clone the git repository or download as zip 
 ### Step 2: Unzip in a convenient location
 
 Switch to folder ./codebase/globomart-retail-parent
