@@ -97,3 +97,9 @@ http://localhost:9004/products/find_price_by_product_id?productId=1
 http://localhost:9004/products/find_price_by_product_id?productId=2
 http://localhost:9004/products/find_price_by_product_id?productId=3
 ```
+## Binaries
+If you want to download the binaries directly and make it work then use the following link to download the different jar files which are built as part of the package goal.
+```sh
+https://www.dropbox.com/sh/zqmhyul759gjyim/AACeMhtsKYDmVlii6lU1jSfra?dl=0
+```
+
