@@ -76,7 +76,7 @@ public class ProductApiGatewayRestController {
      * @param productId
      * @return 
      */
-    public Collection<String> getProductNamesFallback(Long productId) {
+    public Collection<String> getProductNamesFallback() {
         return Collections.emptyList();
     }
     

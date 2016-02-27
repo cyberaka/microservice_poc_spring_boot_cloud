@@ -2,6 +2,6 @@
 /codebase/globomart-retail-parent/globomart-eureka-server/target/
 .mvn
 target
-
-
+dependency-reduced-pom.xml
+binaries/*
 /codebase/globomart-retail-parent/globomart-product-catalog-service/nbproject/
